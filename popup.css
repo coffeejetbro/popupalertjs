@@ -1,0 +1,77 @@
+.popupalerts {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    top: 0px;
+}
+.popupalerts.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    z-index: 9999;
+}
+.popupalerts .popupcontent {
+    max-width: 400px;
+    width: 98%;
+    background: white;
+    padding: 32px;
+    border: 1px solid #95989A;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.5;
+    top: 0px;
+}
+.popupcontent .close {
+    position: absolute;
+    top: -13px;
+    right: -13px;
+}
+.popupcontent .close.hidden {
+    display: none;
+}
+.popupcontent .button {
+    margin-top: 16px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+}
+
+.popupcontent .button a {
+    height: 30px;
+    line-height: 30px;
+    background: darkgrey;
+    color: white;
+    width: 42%;
+    font-size: 14px;
+    opacity: 0.9;
+}
+.popupcontent .button a:hover {
+    opacity: 1;
+}
+.popupcontent .button a.hidden {
+    display: none;
+}
+@media only screen and (max-width: 580px) {
+    .popupalerts .popupcontent {
+        max-width: 360px;
+        padding:12px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .popupalerts .popupcontent {
+        max-width: 290px;
+    }
+    .popupcontent .button a {
+        width: 80%;
+    }
+}

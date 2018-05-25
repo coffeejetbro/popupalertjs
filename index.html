@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no"/>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+                font-family: sans-serif;
+                line-height: 2;
+            }
+            section {
+                padding: 20px;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="popup.css">
+    </head>
+    <body>
+        <section>
+            <h1>Popup / Alerts Demo</h1>
+            <p>Just call showPopup form console to see it in action</p>
+            <p>&nbsp;</p>
+            <p>showPopup(message, positiveText, negativeText, callback, showCloseButton)</p>
+            <p>&nbsp;</p>
+            <p>message - Text message you want to show to user</p>
+            <p>positiveText - Button text for positive response. For eg. "Yes"</p>
+            <p>negativeText - Button text for negative response. For eg. "No"</p>
+            <p>callback - a callback function. two parameters will be provided in callback. first parameter will return 1 (positive) or 0 (negative). second parameter will return true or false to indicate whether close button was clicked or not</p>
+            <p>showCloseButton - True or false, if set to false, it will not allow user to close popup.</p>
+        </section>
+        <script src="popup.js"></script>
+    </body>
+</html>
